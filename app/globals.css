@@ -186,3 +186,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
 }
+
+@keyframes float0 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+@keyframes float1 { 0%, 100% { transform: translateY(0px) rotate(10deg); } 50% { transform: translateY(-20px) rotate(10deg); } }
+@keyframes float2 { 0%, 100% { transform: translateY(0px) rotate(-5deg); } 50% { transform: translateY(-10px) rotate(-5deg); } }
