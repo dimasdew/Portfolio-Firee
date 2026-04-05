@@ -35,12 +35,10 @@ export default function Home() {
           </div>
 
           <h1
-            className="font-heading text-5xl md:text-7xl font-extrabold uppercase leading-tight mb-8 fade-in fade-in-delay-1"
+            className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase leading-tight mb-8 fade-in fade-in-delay-1"
             style={{ color: "var(--navy)", fontFamily: "Syne, sans-serif", textShadow: "0 2px 24px rgba(226,226,182,0.3)" }}
           >
-            The Era of<br />
-            <span style={{ color: "var(--sand)" }}>Decentralized</span><br />
-            Marketplace
+            The Era of Decentralized Marketplace
           </h1>
 
           <p
