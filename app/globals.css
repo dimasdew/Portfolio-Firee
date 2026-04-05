@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sand: #E2E2B6;
+  --sky: #6EACDA;
+  --navy: #03346E;
+  --midnight: #021526;
+  --snow: #F5F5F5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--snow);
+  color: var(--midnight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Hero dot grid pattern */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(3,52,110,0.3) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #E2E2B6 0%, #6EACDA 40%, #03346E 80%, #021526 100%);
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Card hover effect */
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(3,52,110,0.15);
+}
+
+/* Input style */
+.input-field {
+  background: rgba(110,172,218,0.3);
+  border: 1.5px solid rgba(110,172,218,0.4);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--midnight);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(3,52,110,0.12);
+}
+
+.input-field::placeholder {
+  color: rgba(2,21,38,0.4);
+}
+
+/* Button styles */
+.btn-primary {
+  background: var(--navy);
+  color: var(--sand);
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  background: var(--midnight);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--midnight);
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 2px solid var(--sand);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  background: var(--sand);
+  color: var(--navy);
+}
+
+.btn-sand {
+  background: var(--sand);
+  color: var(--navy);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-sand:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--snow);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sky);
+  border-radius: 3px;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.fade-in-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-delay-3 { animation-delay: 0.3s; opacity: 0; }
+
+/* Navbar blur */
+.navbar-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Order status line */
+.status-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(2,21,38,0.55);
+}
+
+.status-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
