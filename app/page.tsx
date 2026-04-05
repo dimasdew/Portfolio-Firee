@@ -1,17 +1,14 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar variant="landing" />
 
-      {/* Hero Section */}
       <section className="relative flex-1 flex items-center justify-center hero-gradient overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
-        {/* Dot Grid Overlay */}
         <div className="absolute inset-0 dot-grid opacity-40" />
 
-        {/* Floating Ethereum Icons */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(8)].map((_, i) => (
             <div
@@ -29,10 +26,11 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Content */}
         <div className="relative z-10 text-center px-6 max-w-3xl">
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full text-xs font-medium tracking-widest uppercase fade-in"
-            style={{ background: "rgba(226,226,182,0.2)", color: "var(--sand)", border: "1px solid rgba(226,226,182,0.3)", fontFamily: "Syne, sans-serif" }}>
+          <div
+            className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full text-xs font-medium tracking-widest uppercase fade-in"
+            style={{ background: "rgba(226,226,182,0.2)", color: "var(--sand)", border: "1px solid rgba(226,226,182,0.3)", fontFamily: "Syne, sans-serif" }}
+          >
             ⬡ Powered by Blockchain
           </div>
 
@@ -61,7 +59,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Stats */}
           <div className="mt-16 flex flex-wrap justify-center gap-8 fade-in fade-in-delay-3">
             {[
               { label: "Products Listed", value: "12,400+" },
@@ -76,15 +73,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-24" style={{ background: "linear-gradient(to top, rgba(2,21,38,0.4), transparent)" }} />
       </section>
-
-      <style jsx>{`
-        @keyframes float0 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
-        @keyframes float1 { 0%, 100% { transform: translateY(0px) rotate(10deg); } 50% { transform: translateY(-20px) rotate(10deg); } }
-        @keyframes float2 { 0%, 100% { transform: translateY(0px) rotate(-5deg); } 50% { transform: translateY(-10px) rotate(-5deg); } }
-      `}</style>
     </div>
   );
 }
